@@ -128,7 +128,7 @@ public class IntroductionController {
             Parent beforeBackground = FXMLLoader.load(getClass().getResource("core.fxml"));
             final Group root = new Group(p, beforeBackground);
             primaryStage.setTitle("Core of the MemoryGame");
-            primaryStage.setScene(new Scene(root, 1200, 500));
+            primaryStage.setScene(new Scene(root, 1200, 650));
             primaryStage.initModality(Modality.WINDOW_MODAL);
             primaryStage.show();
         }
