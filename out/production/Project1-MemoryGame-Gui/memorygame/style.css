@@ -1,0 +1,12 @@
+body{
+}
+
+.button {
+  -fx-background-image: url('./picturecore/card_back.png');
+  -fx-background-size: cover;
+}
+
+.button:hover {
+  -fx-background-image: url('./picturecore/cbhover.png');
+  -fx-background-size: cover;
+}
