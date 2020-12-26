@@ -12,14 +12,54 @@ import javafx.util.Duration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Random;
 
 public class CoreController extends IntroductionController {
+
 
 
     @FXML
     private ImageView idPic0;
     @FXML
     private ImageView idPic1;
+    @FXML
+    private ImageView idPic2;
+    @FXML
+    private ImageView idPic3;
+    @FXML
+    private ImageView idPic4;
+    @FXML
+    private ImageView idPic5;
+    @FXML
+    private ImageView idPic6;
+    @FXML
+    private ImageView idPic7;
+    @FXML
+    private ImageView idPic8;
+    @FXML
+    private ImageView idPic9;
+    @FXML
+    private ImageView idPic10;
+    @FXML
+    private ImageView idPic11;
+    @FXML
+    private ImageView idPic12;
+    @FXML
+    private ImageView idPic13;
+    @FXML
+    private ImageView idPic14;
+    @FXML
+    private ImageView idPic15;
+    @FXML
+    private ImageView idPic16;
+    @FXML
+    private ImageView idPic17;
+    @FXML
+    private ImageView idPic18;
+    @FXML
+    private ImageView idPic19;
+
+
     @FXML
     private Button idStartButton;
     @FXML
@@ -33,7 +73,45 @@ public class CoreController extends IntroductionController {
     @FXML
     private TextField idScore1;
 
-    //a method for initializing a game
+    //arrays for images
+    private Image[] arrNumberImages = new Image[10];
+    private Image[] arrNumberText = new Image[10];
+    private Image[] arrMix = new Image[20];
+
+    //a method for the filling arrays with the pictures
+    private void fillArrays() throws FileNotFoundException {
+        for(int i = 0; i < 10; i++){
+            String path1 = "src/memorygame/numberimages/number" + i + ".jpg";
+            String path2 = "src/memorygame/numbertext/text" + i + ".jpg";
+            FileInputStream inputstream1 = new FileInputStream(path1);
+            FileInputStream inputstream2 = new FileInputStream(path2);
+            Image image1 = new Image(inputstream1);
+            Image image2 = new Image(inputstream2);
+            arrNumberImages[i] = image1;
+            arrNumberText[i] = image2;
+        }
+    }
+
+    //a method for generating numbers from 0 to 19
+    private int[] generateNumbersFrom0to19(){
+        int[] randomArray = new int[20];
+
+        return randomArray;
+    }
+
+    //a method for creating arrMix
+    private void createMixArr(){
+        int[] arrIndex = generateNumbersFrom0to19();
+
+    }
+
+    //a method for putting the cards
+    private void putThecards(){
+
+    }
+
+
+    //a method for an initializing game
     public void setTheGame(ActionEvent actionEvent) throws FileNotFoundException {
         idName1.setText(players[0].getName());
         idName2.setText(players[1].getName());
@@ -41,43 +119,26 @@ public class CoreController extends IntroductionController {
         idScore2.setText(String.valueOf(players[1].getScore()));
         idWhoGoes.setText(idName1.getText() + " it is your turn!!!");
         idStartButton.setVisible(false);
-
-        //skusobne
-        FileInputStream inputstream = new FileInputStream("src/memorygame/numberimages/number0.jpg");
-
-        Image image = new Image(inputstream);
-        idPic0.setImage(image);
-        idPic0.setVisible(false);
-
-        inputstream = new FileInputStream("src/memorygame/numberimages/number1.jpg");
-        image = new Image(inputstream);
-        idPic1.setImage(image);
-        idPic1.setVisible(false);
-
+        //filling the arrays with the images
+        fillArrays();
+        //mixing the pictures
+        createMixArr();
+        //putting the cards
+        putThecards();
     }
 
 
 
 
     public void click0(ActionEvent actionEvent) {
-        //skusobne
+        //iba pre skusku
         idPic0.setVisible(true);
     }
 
     public void click1(ActionEvent actionEvent) {
-        //skusobne
+        //iba pre skusku
         idPic1.setVisible(true);
 
-        Timeline timeline = new Timeline(
-                new KeyFrame(
-                        Duration.seconds(1),
-                        event -> {
-                            idPic0.setVisible(false);
-                            idPic1.setVisible(false);
-                        }
-                )
-        );
-        timeline.play();
     }
 
     public void click2(ActionEvent actionEvent) {

@@ -28,27 +28,46 @@
       <TextField fx:id="idWhoGoes" editable="false" layoutX="336.0" layoutY="136.0" prefHeight="25.0" prefWidth="512.0" />
       <TextField fx:id="idScore1" editable="false" layoutX="14.0" layoutY="90.0" prefHeight="38.0" prefWidth="70.0" />
       <Button fx:id="idStartButton" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onAction="#setTheGame" prefHeight="173.0" prefWidth="1194.0" text="Toto tlacidlo sa vola Play a bude na konci roztiahnute na celu obrazovku je to inicializacia hry" />
-      <Button fx:id="idBut0" layoutX="296.0" layoutY="179.0" mnemonicParsing="false" onAction="#click0" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut1" layoutX="425.0" layoutY="179.0" mnemonicParsing="false" onAction="#click1" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut2" layoutX="552.0" layoutY="179.0" mnemonicParsing="false" onAction="#click2" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut3" layoutX="680.0" layoutY="179.0" mnemonicParsing="false" onAction="#click3" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut4" layoutX="808.0" layoutY="179.0" mnemonicParsing="false" onAction="#click4" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut5" layoutX="296.0" layoutY="290.0" mnemonicParsing="false" onAction="#click5" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut6" layoutX="425.0" layoutY="290.0" mnemonicParsing="false" onAction="#click6" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut7" layoutX="552.0" layoutY="290.0" mnemonicParsing="false" onAction="#click7" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut8" layoutX="680.0" layoutY="290.0" mnemonicParsing="false" onAction="#click8" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut9" layoutX="808.0" layoutY="290.0" mnemonicParsing="false" onAction="#click9" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut10" layoutX="297.0" layoutY="399.0" mnemonicParsing="false" onAction="#click10" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut11" layoutX="425.0" layoutY="399.0" mnemonicParsing="false" onAction="#click11" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut12" layoutX="552.0" layoutY="399.0" mnemonicParsing="false" onAction="#click12" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut13" layoutX="680.0" layoutY="399.0" mnemonicParsing="false" onAction="#click13" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut14" layoutX="808.0" layoutY="399.0" mnemonicParsing="false" onAction="#click14" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut15" layoutX="296.0" layoutY="509.0" mnemonicParsing="false" onAction="#click15" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut16" layoutX="425.0" layoutY="509.0" mnemonicParsing="false" onAction="#click16" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut17" layoutX="552.0" layoutY="509.0" mnemonicParsing="false" onAction="#click17" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut18" layoutX="680.0" layoutY="509.0" mnemonicParsing="false" onAction="#click18" prefHeight="80.0" prefWidth="80.0" text="Button" />
-      <Button fx:id="idBut19" layoutX="808.0" layoutY="509.0" mnemonicParsing="false" onAction="#click19" prefHeight="80.0" prefWidth="80.0" text="Button" />
+
+      <Button fx:id="idBut0" layoutX="296.0" layoutY="179.0" mnemonicParsing="false" onAction="#click0" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut1" layoutX="425.0" layoutY="179.0" mnemonicParsing="false" onAction="#click1" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut2" layoutX="552.0" layoutY="179.0" mnemonicParsing="false" onAction="#click2" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut3" layoutX="680.0" layoutY="179.0" mnemonicParsing="false" onAction="#click3" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut4" layoutX="808.0" layoutY="179.0" mnemonicParsing="false" onAction="#click4" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut5" layoutX="296.0" layoutY="290.0" mnemonicParsing="false" onAction="#click5" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut6" layoutX="425.0" layoutY="290.0" mnemonicParsing="false" onAction="#click6" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut7" layoutX="552.0" layoutY="290.0" mnemonicParsing="false" onAction="#click7" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut8" layoutX="680.0" layoutY="290.0" mnemonicParsing="false" onAction="#click8" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut9" layoutX="808.0" layoutY="290.0" mnemonicParsing="false" onAction="#click9" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut10" layoutX="297.0" layoutY="399.0" mnemonicParsing="false" onAction="#click10" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut11" layoutX="425.0" layoutY="399.0" mnemonicParsing="false" onAction="#click11" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut12" layoutX="552.0" layoutY="399.0" mnemonicParsing="false" onAction="#click12" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut13" layoutX="680.0" layoutY="399.0" mnemonicParsing="false" onAction="#click13" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut14" layoutX="808.0" layoutY="399.0" mnemonicParsing="false" onAction="#click14" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut15" layoutX="296.0" layoutY="509.0" mnemonicParsing="false" onAction="#click15" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut16" layoutX="425.0" layoutY="509.0" mnemonicParsing="false" onAction="#click16" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut17" layoutX="552.0" layoutY="509.0" mnemonicParsing="false" onAction="#click17" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut18" layoutX="680.0" layoutY="509.0" mnemonicParsing="false" onAction="#click18" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
+      <Button fx:id="idBut19" layoutX="808.0" layoutY="509.0" mnemonicParsing="false" onAction="#click19" prefHeight="80.0" prefWidth="80.0" styleClass="button" stylesheets="@./style.css" />
       <ImageView fx:id="idPic1" fitHeight="90.0" fitWidth="90.0" layoutX="420.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="idPic0" fitHeight="90.0" fitWidth="90.0" layoutX="292.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic2" fitHeight="90.0" fitWidth="90.0" layoutX="547.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic3" fitHeight="90.0" fitWidth="90.0" layoutX="675.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic4" fitHeight="90.0" fitWidth="90.0" layoutX="803.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic5" fitHeight="90.0" fitWidth="90.0" layoutX="291.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic6" fitHeight="90.0" fitWidth="90.0" layoutX="420.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic7" fitHeight="90.0" fitWidth="90.0" layoutX="547.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic8" fitHeight="90.0" fitWidth="90.0" layoutX="675.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic9" fitHeight="90.0" fitWidth="90.0" layoutX="803.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic10" fitHeight="90.0" fitWidth="90.0" layoutX="292.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic11" fitHeight="90.0" fitWidth="90.0" layoutX="420.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic12" fitHeight="90.0" fitWidth="90.0" layoutX="547.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic13" fitHeight="90.0" fitWidth="90.0" layoutX="675.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic14" fitHeight="90.0" fitWidth="90.0" layoutX="803.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic15" fitHeight="90.0" fitWidth="90.0" layoutX="291.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic16" fitHeight="90.0" fitWidth="90.0" layoutX="420.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic17" fitHeight="90.0" fitWidth="90.0" layoutX="547.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic18" fitHeight="90.0" fitWidth="90.0" layoutX="675.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic19" fitHeight="90.0" fitWidth="90.0" layoutX="803.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>
