@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -47,5 +48,7 @@
       <Button fx:id="idBut17" layoutX="552.0" layoutY="509.0" mnemonicParsing="false" onAction="#click17" prefHeight="80.0" prefWidth="80.0" text="Button" />
       <Button fx:id="idBut18" layoutX="680.0" layoutY="509.0" mnemonicParsing="false" onAction="#click18" prefHeight="80.0" prefWidth="80.0" text="Button" />
       <Button fx:id="idBut19" layoutX="808.0" layoutY="509.0" mnemonicParsing="false" onAction="#click19" prefHeight="80.0" prefWidth="80.0" text="Button" />
+      <ImageView fx:id="idPic1" fitHeight="90.0" fitWidth="90.0" layoutX="420.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idPic0" fitHeight="90.0" fitWidth="90.0" layoutX="292.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>
