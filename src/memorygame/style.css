@@ -9,4 +9,5 @@ body{
 .button:hover {
   -fx-background-image: url('./picturecore/cbhover.png');
   -fx-background-size: cover;
+  -fx-cursor: hand;
 }
