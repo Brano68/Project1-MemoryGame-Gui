@@ -1,14 +1,11 @@
 package memorygame;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.util.Duration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -65,6 +62,9 @@ public class CoreController extends IntroductionController {
     @FXML
     private Button idStartButton;
     @FXML
+    private Button idBut0, idBut1, idBut2, idBut3, idBut4, idBut5, idBut6, idBut7, idBut8, idBut9,
+            idBut10, idBut11, idBut12, idBut13, idBut14, idBut15, idBut16, idBut17, idBut18, idBut19;
+    @FXML
     private TextField idWhoGoes;
     @FXML
     private TextField idName1;
@@ -118,10 +118,27 @@ public class CoreController extends IntroductionController {
     }
 
     //a method for putting the cards
-    private void putThecards(){
-        for(int i=0; i<arrMix.length; i++){
-
-        }
+    private void putTheCards(){
+        idPic0.setImage(arrMix[0]); idPic0.setVisible(false);
+        idPic1.setImage(arrMix[1]); idPic1.setVisible(false);
+        idPic2.setImage(arrMix[2]); idPic2.setVisible(false);
+        idPic3.setImage(arrMix[3]); idPic3.setVisible(false);
+        idPic4.setImage(arrMix[4]); idPic4.setVisible(false);
+        idPic5.setImage(arrMix[5]); idPic5.setVisible(false);
+        idPic6.setImage(arrMix[6]); idPic6.setVisible(false);
+        idPic7.setImage(arrMix[7]); idPic7.setVisible(false);
+        idPic8.setImage(arrMix[8]); idPic8.setVisible(false);
+        idPic9.setImage(arrMix[9]); idPic9.setVisible(false);
+        idPic10.setImage(arrMix[10]); idPic10.setVisible(false);
+        idPic11.setImage(arrMix[11]); idPic11.setVisible(false);
+        idPic12.setImage(arrMix[12]); idPic12.setVisible(false);
+        idPic13.setImage(arrMix[13]); idPic13.setVisible(false);
+        idPic14.setImage(arrMix[14]); idPic14.setVisible(false);
+        idPic15.setImage(arrMix[15]); idPic15.setVisible(false);
+        idPic16.setImage(arrMix[16]); idPic16.setVisible(false);
+        idPic17.setImage(arrMix[17]); idPic17.setVisible(false);
+        idPic18.setImage(arrMix[18]); idPic18.setVisible(false);
+        idPic19.setImage(arrMix[19]); idPic19.setVisible(false);
     }
 
 
@@ -138,7 +155,7 @@ public class CoreController extends IntroductionController {
         //mixing the pictures
         createMixArr();
         //putting the cards
-        putThecards();
+        putTheCards();
     }
 
 
@@ -147,66 +164,104 @@ public class CoreController extends IntroductionController {
     public void click0(ActionEvent actionEvent) {
         //iba pre skusku
         idPic0.setVisible(true);
+        idBut0.setVisible(false);
     }
 
     public void click1(ActionEvent actionEvent) {
         //iba pre skusku
         idPic1.setVisible(true);
+        idBut1.setVisible(false);
 
     }
 
     public void click2(ActionEvent actionEvent) {
+        idPic2.setVisible(true);
+        idBut2.setVisible(false);
     }
 
     public void click3(ActionEvent actionEvent) {
+        idPic3.setVisible(true);
+        idBut3.setVisible(false);
     }
 
     public void click4(ActionEvent actionEvent) {
+        idPic4.setVisible(true);
+        idBut4.setVisible(false);
     }
 
     public void click5(ActionEvent actionEvent) {
+        idPic5.setVisible(true);
+        idBut5.setVisible(false);
     }
 
     public void click6(ActionEvent actionEvent) {
+        idPic6.setVisible(true);
+        idBut6.setVisible(false);
     }
 
     public void click7(ActionEvent actionEvent) {
+        idPic7.setVisible(true);
+        idBut7.setVisible(false);
     }
 
     public void click8(ActionEvent actionEvent) {
+        idPic8.setVisible(true);
+        idBut8.setVisible(false);
     }
 
     public void click9(ActionEvent actionEvent) {
+        idPic9.setVisible(true);
+        idBut9.setVisible(false);
     }
 
     public void click10(ActionEvent actionEvent) {
+        idPic10.setVisible(true);
+        idBut10.setVisible(false);
     }
 
     public void click11(ActionEvent actionEvent) {
+        idPic11.setVisible(true);
+        idBut11.setVisible(false);
     }
 
     public void click12(ActionEvent actionEvent) {
+        idPic12.setVisible(true);
+        idBut12.setVisible(false);
     }
 
     public void click13(ActionEvent actionEvent) {
+        idPic13.setVisible(true);
+        idBut13.setVisible(false);
     }
 
     public void click14(ActionEvent actionEvent) {
+        idPic14.setVisible(true);
+        idBut14.setVisible(false);
     }
 
     public void click15(ActionEvent actionEvent) {
+        idPic15.setVisible(true);
+        idBut15.setVisible(false);
     }
 
     public void click16(ActionEvent actionEvent) {
+        idPic16.setVisible(true);
+        idBut16.setVisible(false);
     }
 
     public void click17(ActionEvent actionEvent) {
+        idPic17.setVisible(true);
+        idBut17.setVisible(false);
     }
 
     public void click18(ActionEvent actionEvent) {
+        idPic18.setVisible(true);
+        idBut18.setVisible(false);
     }
 
     public void click19(ActionEvent actionEvent) {
+        idPic19.setVisible(true);
+        idBut19.setVisible(false);
     }
 
 }
