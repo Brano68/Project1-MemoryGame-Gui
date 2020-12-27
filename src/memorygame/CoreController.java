@@ -12,7 +12,9 @@ import javafx.util.Duration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class CoreController extends IntroductionController {
 
@@ -95,6 +97,13 @@ public class CoreController extends IntroductionController {
     //a method for generating numbers from 0 to 19
     private int[] generateNumbersFrom0to19(){
         int[] randomArray = new int[20];
+        Set<Integer> set = new HashSet<>();
+        for(int i=0; i<randomArray.length-1; i++){
+            for(;;){
+                int num = new Random().nextInt(20);
+                if(set.add(num)==true){ randomArray[i]=num; break; }
+            }
+        }
 
         return randomArray;
     }
