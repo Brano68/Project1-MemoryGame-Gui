@@ -98,7 +98,7 @@ public class CoreController extends IntroductionController {
     private int[] generateNumbersFrom0to19(){
         int[] randomArray = new int[20];
         Set<Integer> set = new HashSet<>();
-        for(int i=0; i<randomArray.length-1; i++){
+        for(int i=0; i<randomArray.length; i++){
             for(;;){
                 int num = new Random().nextInt(20);
                 if(set.add(num)==true){ randomArray[i]=num; break; }
@@ -111,12 +111,17 @@ public class CoreController extends IntroductionController {
     //a method for creating arrMix
     private void createMixArr(){
         int[] arrIndex = generateNumbersFrom0to19();
-
+        for(int i=0; i<10; i++)
+            arrMix[arrIndex[i]]=arrNumberText[i];
+        for(int j=0; j<10; j++)
+            arrMix[arrIndex[j+10]]=arrNumberImages[j];
     }
 
     //a method for putting the cards
     private void putThecards(){
+        for(int i=0; i<arrMix.length; i++){
 
+        }
     }
 
 
