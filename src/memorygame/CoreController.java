@@ -12,7 +12,9 @@ import javafx.util.Duration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class CoreController extends IntroductionController {
 
@@ -95,6 +97,13 @@ public class CoreController extends IntroductionController {
     //a method for generating numbers from 0 to 19
     private int[] generateNumbersFrom0to19(){
         int[] randomArray = new int[20];
+        Set<Integer> set = new HashSet<>();
+        for(int i=0; i<randomArray.length; i++){
+            for(;;){
+                int num = new Random().nextInt(20);
+                if(set.add(num)==true){ randomArray[i]=num; break; }
+            }
+        }
 
         return randomArray;
     }
@@ -102,12 +111,17 @@ public class CoreController extends IntroductionController {
     //a method for creating arrMix
     private void createMixArr(){
         int[] arrIndex = generateNumbersFrom0to19();
-
+        for(int i=0; i<10; i++)
+            arrMix[arrIndex[i]]=arrNumberText[i];
+        for(int j=0; j<10; j++)
+            arrMix[arrIndex[j+10]]=arrNumberImages[j];
     }
 
     //a method for putting the cards
     private void putThecards(){
+        for(int i=0; i<arrMix.length; i++){
 
+        }
     }
 
 
