@@ -366,9 +366,12 @@ public class CoreController extends IntroductionController {
     private boolean findOutIndexes(ArrayList<Image> array){
         Image image1 = array.get(0);
         Image image2 = array.get(1);
-
-
-
+        for(int i=0; i<arrNumberImages.length; i++){
+            for(int j=0; j<arrNumberText.length; j++){
+                if(image1.equals(arrNumberImages[i]) && image2.equals(arrNumberText[j])
+                        && i==j) return true;
+            }
+        }
 
         return false;
     }
