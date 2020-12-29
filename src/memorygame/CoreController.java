@@ -12,6 +12,7 @@ import javafx.util.Duration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class CoreController extends IntroductionController {
@@ -101,7 +102,6 @@ public class CoreController extends IntroductionController {
 
     //a method for creating arrMix
     private void createMixArr(){
-        int[] arrIndex = generateNumbersFrom0to19();
 
     }
 
@@ -119,9 +119,10 @@ public class CoreController extends IntroductionController {
         idScore2.setText(String.valueOf(players[1].getScore()));
         idWhoGoes.setText(idName1.getText() + " it is your turn!!!");
         idStartButton.setVisible(false);
+
         //filling the arrays with the images
         fillArrays();
-        //mixing the pictures
+        //mixing pictures for example 1 with pictures one...
         createMixArr();
         //putting the cards
         putThecards();
@@ -131,12 +132,12 @@ public class CoreController extends IntroductionController {
 
 
     public void click0(ActionEvent actionEvent) {
-        //iba pre skusku
+        //skusobne
         idPic0.setVisible(true);
     }
 
     public void click1(ActionEvent actionEvent) {
-        //iba pre skusku
+        //skusobne
         idPic1.setVisible(true);
 
     }
@@ -194,5 +195,6 @@ public class CoreController extends IntroductionController {
 
     public void click19(ActionEvent actionEvent) {
     }
-
 }
+
+
