@@ -354,7 +354,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    
+
     //a method for comparing the cards
     private void compareTheCards() {
 
@@ -384,7 +384,7 @@ public class CoreController extends IntroductionController {
 
     //a method which is used for setting for the seenCards, id0, id1, id2..... set everything 0 value
     private void setAllZero(){
-
+        
     }
 
 }
