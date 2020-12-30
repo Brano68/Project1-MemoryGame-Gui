@@ -357,8 +357,92 @@ public class CoreController extends IntroductionController {
 
     //a method for comparing the cards
     private void compareTheCards() {
-
-
+        if (seenCards == 2) {
+            ArrayList<Image> array = new ArrayList<>();
+            if (id0 == 1) {
+                array.add(idPic0.getImage());
+            }
+            if (id1 == 1) {
+                array.add(idPic1.getImage());
+            }
+            if (id2 == 1) {
+                array.add(idPic2.getImage());
+            }
+            if (id3 == 1) {
+                array.add(idPic3.getImage());
+            }
+            if (id4 == 1) {
+                array.add(idPic4.getImage());
+            }
+            if (id5 == 1) {
+                array.add(idPic5.getImage());
+            }
+            if (id6 == 1) {
+                array.add(idPic6.getImage());
+            }
+            if (id7 == 1) {
+                array.add(idPic7.getImage());
+            }
+            if (id8 == 1) {
+                array.add(idPic8.getImage());
+            }
+            if (id9 == 1) {
+                array.add(idPic9.getImage());
+            }
+            if (id10 == 1) {
+                array.add(idPic10.getImage());
+            }
+            if (id11 == 1) {
+                array.add(idPic11.getImage());
+            }
+            if (id12 == 1) {
+                array.add(idPic12.getImage());
+            }
+            if (id13 == 1) {
+                array.add(idPic13.getImage());
+            }
+            if (id14 == 1) {
+                array.add(idPic14.getImage());
+            }
+            if (id15 == 1) {
+                array.add(idPic15.getImage());
+            }
+            if (id16 == 1) {
+                array.add(idPic16.getImage());
+            }
+            if (id17 == 1) {
+                array.add(idPic17.getImage());
+            }
+            if (id18 == 1) {
+                array.add(idPic18.getImage());
+            }
+            if (id19 == 1) {
+                array.add(idPic19.getImage());
+            }
+            //check if the player was right
+            boolean result = findOutIndexes(array);
+            //turning the cards
+            if(result == false){
+                turnTheCardsBack();
+                String string = idWhoGoes.getText();
+                if(string.charAt(0) == '1'){
+                    idWhoGoes.setText("2Player: " + idName2.getText() + " it is your turn!!!");
+                }else {
+                    idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
+                }
+            }else {
+                String string = idWhoGoes.getText();
+                if(string.charAt(0) == '1'){
+                    players[0].setScore(2);
+                    idScore1.setText(String.valueOf(players[0].getScore()));
+                }else {
+                    players[1].setScore(2);
+                    idScore2.setText(String.valueOf(players[1].getScore()));
+                }
+            }
+            //set all zero
+            setAllZero();
+        }
     }
 
 
@@ -374,6 +458,7 @@ public class CoreController extends IntroductionController {
         }
 
         return false;
+
     }
 
 
@@ -387,7 +472,27 @@ public class CoreController extends IntroductionController {
 
     //a method which is used for setting for the seenCards, id0, id1, id2..... set everything 0 value
     private void setAllZero(){
-        
+        seenCards = 0;
+        id0 = 0;
+        id1 = 0;
+        id2 = 0;
+        id3 = 0;
+        id4 = 0;
+        id5 = 0;
+        id6 = 0;
+        id7 = 0;
+        id8 = 0;
+        id9 = 0;
+        id10 = 0;
+        id11 = 0;
+        id12 = 0;
+        id13 = 0;
+        id14 = 0;
+        id15 = 0;
+        id16 = 0;
+        id17 = 0;
+        id18 = 0;
+        id19 = 0;
     }
 
 }
