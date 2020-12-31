@@ -532,6 +532,7 @@ public class CoreController extends IntroductionController {
 
 
     //a method if the player is right the buttons and images are disappeared
+    //
     private void hideTheCardsAndButtons(){
         if(id0 == 1){
             Timeline timeline = new Timeline(
