@@ -1,6 +1,7 @@
 package memorygame;
 
 import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -423,7 +424,9 @@ public class CoreController extends IntroductionController {
             boolean result = findOutIndexes(array);
             //turning the cards
             if(result == false){
-                turnTheCardsBack();
+                PauseTransition pause = new PauseTransition(Duration.seconds(1.2));
+                pause.setOnFinished(event -> turnTheCardsBack(array));
+                pause.play();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     idWhoGoes.setText("2Player: " + idName2.getText() + " it is your turn!!!");
@@ -431,7 +434,7 @@ public class CoreController extends IntroductionController {
                     idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
                 }
             }else {
-                //hideTheCardsAndButtons();
+                hideTheCardsAndButtons();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     players[0].setScore(2);
@@ -451,11 +454,25 @@ public class CoreController extends IntroductionController {
     private boolean findOutIndexes(ArrayList<Image> array){
         Image image1 = array.get(0);
         Image image2 = array.get(1);
-        for(int i=0; i<arrNumberImages.length; i++){
-            for(int j=0; j<arrNumberText.length; j++){
-                if(image1.equals(arrNumberImages[i]) && image2.equals(arrNumberText[j])
-                        && i==j) return true;
+
+        int a = 0;
+        int b = 1;
+
+        for(int i = 0; i < arrNumberImages.length; i++){
+            if(arrNumberImages[i] == image1 || arrNumberText[i] == image1){
+                a = i;
+                break;
             }
+        }
+        for(int i = 0; i < arrNumberText.length; i++){
+            if(arrNumberText[i] == image2 || arrNumberImages[i] == image2){
+                b = i;
+                break;
+            }
+        }
+
+        if(a == b){
+            return true;
         }
         return false;
     }
@@ -463,8 +480,27 @@ public class CoreController extends IntroductionController {
 
 
     //a method for turning the cards back
-    private void turnTheCardsBack(){
-
+    private void turnTheCardsBack(ArrayList<Image> array){
+        if(array.contains(idPic0.getImage())) idPic0.setVisible(false);
+        if(array.contains(idPic1.getImage())) idPic1.setVisible(false);
+        if(array.contains(idPic2.getImage())) idPic2.setVisible(false);
+        if(array.contains(idPic3.getImage())) idPic3.setVisible(false);
+        if(array.contains(idPic4.getImage())) idPic4.setVisible(false);
+        if(array.contains(idPic5.getImage())) idPic5.setVisible(false);
+        if(array.contains(idPic6.getImage())) idPic6.setVisible(false);
+        if(array.contains(idPic7.getImage())) idPic7.setVisible(false);
+        if(array.contains(idPic8.getImage())) idPic8.setVisible(false);
+        if(array.contains(idPic9.getImage())) idPic9.setVisible(false);
+        if(array.contains(idPic10.getImage())) idPic10.setVisible(false);
+        if(array.contains(idPic11.getImage())) idPic11.setVisible(false);
+        if(array.contains(idPic12.getImage())) idPic12.setVisible(false);
+        if(array.contains(idPic13.getImage())) idPic13.setVisible(false);
+        if(array.contains(idPic14.getImage())) idPic14.setVisible(false);
+        if(array.contains(idPic15.getImage())) idPic15.setVisible(false);
+        if(array.contains(idPic16.getImage())) idPic16.setVisible(false);
+        if(array.contains(idPic17.getImage())) idPic17.setVisible(false);
+        if(array.contains(idPic18.getImage())) idPic18.setVisible(false);
+        if(array.contains(idPic19.getImage())) idPic19.setVisible(false);
     }
 
 
@@ -497,7 +533,246 @@ public class CoreController extends IntroductionController {
 
     //a method if the player is right the buttons and images are disappeared
     private void hideTheCardsAndButtons(){
-
+        if(id0 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut0.setVisible(false);
+                                idPic0.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id1 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut1.setVisible(false);
+                                idPic1.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id2 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut2.setVisible(false);
+                                idPic2.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id3 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut3.setVisible(false);
+                                idPic3.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id4 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut4.setVisible(false);
+                                idPic4.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id5 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut5.setVisible(false);
+                                idPic5.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id6 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut6.setVisible(false);
+                                idPic6.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id7 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut7.setVisible(false);
+                                idPic7.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id8 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut8.setVisible(false);
+                                idPic8.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id9 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut9.setVisible(false);
+                                idPic9.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id10 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut10.setVisible(false);
+                                idPic10.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id11 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut11.setVisible(false);
+                                idPic11.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id12 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut12.setVisible(false);
+                                idPic12.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id13 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut13.setVisible(false);
+                                idPic13.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id14 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut14.setVisible(false);
+                                idPic14.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id15 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut15.setVisible(false);
+                                idPic15.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id16 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut16.setVisible(false);
+                                idPic16.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id17 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut17.setVisible(false);
+                                idPic17.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id18 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut18.setVisible(false);
+                                idPic18.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id19 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut19.setVisible(false);
+                                idPic19.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
     }
 
 }
