@@ -424,12 +424,9 @@ public class CoreController extends IntroductionController {
             boolean result = findOutIndexes(array);
             //turning the cards
             if(result == false){
-                disableButtons();
-                PauseTransition pause1 = new PauseTransition(Duration.seconds(2));
-                PauseTransition pause2 = new PauseTransition(Duration.seconds(2));
-                pause1.setOnFinished(event -> turnTheCardsBack(array));
-                pause2.setOnFinished(event -> enableButtons());
-                pause1.play(); pause2.play();
+                PauseTransition pause = new PauseTransition(Duration.seconds(1.2));
+                pause.setOnFinished(event -> turnTheCardsBack(array));
+                pause.play();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     idWhoGoes.setText("2Player: " + idName2.getText() + " it is your turn!!!");
@@ -437,6 +434,7 @@ public class CoreController extends IntroductionController {
                     idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
                 }
             }else {
+                hideTheCardsAndButtons();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     players[0].setScore(2);
@@ -456,15 +454,27 @@ public class CoreController extends IntroductionController {
     private boolean findOutIndexes(ArrayList<Image> array){
         Image image1 = array.get(0);
         Image image2 = array.get(1);
-        for(int i=0; i<arrNumberImages.length; i++){
-            for(int j=0; j<arrNumberText.length; j++){
-                if(image1.equals(arrNumberImages[i]) && image2.equals(arrNumberText[j])
-                        && i==j) return true;
+
+        int a = 0;
+        int b = 1;
+
+        for(int i = 0; i < arrNumberImages.length; i++){
+            if(arrNumberImages[i] == image1 || arrNumberText[i] == image1){
+                a = i;
+                break;
+            }
+        }
+        for(int i = 0; i < arrNumberText.length; i++){
+            if(arrNumberText[i] == image2 || arrNumberImages[i] == image2){
+                b = i;
+                break;
             }
         }
 
+        if(a == b){
+            return true;
+        }
         return false;
-
     }
 
 
@@ -520,18 +530,249 @@ public class CoreController extends IntroductionController {
         id19 = 0;
     }
 
-    private void disableButtons(){
-        idBut0.setDisable(true); idBut1.setDisable(true); idBut2.setDisable(true); idBut3.setDisable(true); idBut4.setDisable(true);
-        idBut5.setDisable(true); idBut6.setDisable(true); idBut7.setDisable(true); idBut8.setDisable(true); idBut9.setDisable(true);
-        idBut10.setDisable(true); idBut11.setDisable(true); idBut12.setDisable(true); idBut13.setDisable(true); idBut14.setDisable(true);
-        idBut15.setDisable(true); idBut16.setDisable(true); idBut17.setDisable(true); idBut18.setDisable(true); idBut19.setDisable(true);
-    }
 
-    private void enableButtons(){
-        idBut0.setDisable(false); idBut1.setDisable(false); idBut2.setDisable(false); idBut3.setDisable(false); idBut4.setDisable(false);
-        idBut5.setDisable(false); idBut6.setDisable(false); idBut7.setDisable(false); idBut8.setDisable(false); idBut9.setDisable(false);
-        idBut10.setDisable(false); idBut11.setDisable(false); idBut12.setDisable(false); idBut13.setDisable(false); idBut14.setDisable(false);
-        idBut15.setDisable(false); idBut16.setDisable(false); idBut17.setDisable(false); idBut18.setDisable(false); idBut19.setDisable(false);
+    //a method if the player is right the buttons and images are disappeared
+    private void hideTheCardsAndButtons(){
+        if(id0 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut0.setVisible(false);
+                                idPic0.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id1 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut1.setVisible(false);
+                                idPic1.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id2 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut2.setVisible(false);
+                                idPic2.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id3 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut3.setVisible(false);
+                                idPic3.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id4 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut4.setVisible(false);
+                                idPic4.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id5 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut5.setVisible(false);
+                                idPic5.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id6 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut6.setVisible(false);
+                                idPic6.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id7 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut7.setVisible(false);
+                                idPic7.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id8 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut8.setVisible(false);
+                                idPic8.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id9 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut9.setVisible(false);
+                                idPic9.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id10 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut10.setVisible(false);
+                                idPic10.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id11 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut11.setVisible(false);
+                                idPic11.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id12 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut12.setVisible(false);
+                                idPic12.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id13 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut13.setVisible(false);
+                                idPic13.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id14 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut14.setVisible(false);
+                                idPic14.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id15 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut15.setVisible(false);
+                                idPic15.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id16 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut16.setVisible(false);
+                                idPic16.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id17 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut17.setVisible(false);
+                                idPic17.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id18 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut18.setVisible(false);
+                                idPic18.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
+        if(id19 == 1){
+            Timeline timeline = new Timeline(
+                    new KeyFrame(
+                            Duration.seconds(1),
+                            event -> {
+                                idBut19.setVisible(false);
+                                idPic19.setVisible(false);
+                            }
+                    )
+            );
+            timeline.play();
+        }
     }
 
 }
