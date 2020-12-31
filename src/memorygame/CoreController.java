@@ -424,9 +424,12 @@ public class CoreController extends IntroductionController {
             boolean result = findOutIndexes(array);
             //turning the cards
             if(result == false){
-                PauseTransition pause = new PauseTransition(Duration.seconds(1.2));
-                pause.setOnFinished(event -> turnTheCardsBack(array));
-                pause.play();
+                disableButtons();
+                PauseTransition pause1 = new PauseTransition(Duration.seconds(2));
+                PauseTransition pause2 = new PauseTransition(Duration.seconds(2));
+                pause1.setOnFinished(event -> turnTheCardsBack(array));
+                pause2.setOnFinished(event -> enableButtons());
+                pause1.play(); pause2.play();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     idWhoGoes.setText("2Player: " + idName2.getText() + " it is your turn!!!");
@@ -515,6 +518,20 @@ public class CoreController extends IntroductionController {
         id17 = 0;
         id18 = 0;
         id19 = 0;
+    }
+
+    private void disableButtons(){
+        idBut0.setDisable(true); idBut1.setDisable(true); idBut2.setDisable(true); idBut3.setDisable(true); idBut4.setDisable(true);
+        idBut5.setDisable(true); idBut6.setDisable(true); idBut7.setDisable(true); idBut8.setDisable(true); idBut9.setDisable(true);
+        idBut10.setDisable(true); idBut11.setDisable(true); idBut12.setDisable(true); idBut13.setDisable(true); idBut14.setDisable(true);
+        idBut15.setDisable(true); idBut16.setDisable(true); idBut17.setDisable(true); idBut18.setDisable(true); idBut19.setDisable(true);
+    }
+
+    private void enableButtons(){
+        idBut0.setDisable(false); idBut1.setDisable(false); idBut2.setDisable(false); idBut3.setDisable(false); idBut4.setDisable(false);
+        idBut5.setDisable(false); idBut6.setDisable(false); idBut7.setDisable(false); idBut8.setDisable(false); idBut9.setDisable(false);
+        idBut10.setDisable(false); idBut11.setDisable(false); idBut12.setDisable(false); idBut13.setDisable(false); idBut14.setDisable(false);
+        idBut15.setDisable(false); idBut16.setDisable(false); idBut17.setDisable(false); idBut18.setDisable(false); idBut19.setDisable(false);
     }
 
 }
