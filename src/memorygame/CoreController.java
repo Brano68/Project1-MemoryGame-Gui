@@ -431,6 +431,7 @@ public class CoreController extends IntroductionController {
                     idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
                 }
             }else {
+                //hideTheCardsAndButtons();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     players[0].setScore(2);
@@ -456,9 +457,7 @@ public class CoreController extends IntroductionController {
                         && i==j) return true;
             }
         }
-
         return false;
-
     }
 
 
@@ -493,6 +492,12 @@ public class CoreController extends IntroductionController {
         id17 = 0;
         id18 = 0;
         id19 = 0;
+    }
+
+
+    //a method if the player is right the buttons and images are disappeared
+    private void hideTheCardsAndButtons(){
+
     }
 
 }
