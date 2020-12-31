@@ -1,6 +1,7 @@
 package memorygame;
 
 import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -423,7 +424,9 @@ public class CoreController extends IntroductionController {
             boolean result = findOutIndexes(array);
             //turning the cards
             if(result == false){
-                turnTheCardsBack();
+                PauseTransition pause = new PauseTransition(Duration.seconds(1.2));
+                pause.setOnFinished(event -> turnTheCardsBack(array));
+                pause.play();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     idWhoGoes.setText("2Player: " + idName2.getText() + " it is your turn!!!");
@@ -464,8 +467,27 @@ public class CoreController extends IntroductionController {
 
 
     //a method for turning the cards back
-    private void turnTheCardsBack(){
-
+    private void turnTheCardsBack(ArrayList<Image> array){
+        if(array.contains(idPic0.getImage())) idPic0.setVisible(false);
+        if(array.contains(idPic1.getImage())) idPic1.setVisible(false);
+        if(array.contains(idPic2.getImage())) idPic2.setVisible(false);
+        if(array.contains(idPic3.getImage())) idPic3.setVisible(false);
+        if(array.contains(idPic4.getImage())) idPic4.setVisible(false);
+        if(array.contains(idPic5.getImage())) idPic5.setVisible(false);
+        if(array.contains(idPic6.getImage())) idPic6.setVisible(false);
+        if(array.contains(idPic7.getImage())) idPic7.setVisible(false);
+        if(array.contains(idPic8.getImage())) idPic8.setVisible(false);
+        if(array.contains(idPic9.getImage())) idPic9.setVisible(false);
+        if(array.contains(idPic10.getImage())) idPic10.setVisible(false);
+        if(array.contains(idPic11.getImage())) idPic11.setVisible(false);
+        if(array.contains(idPic12.getImage())) idPic12.setVisible(false);
+        if(array.contains(idPic13.getImage())) idPic13.setVisible(false);
+        if(array.contains(idPic14.getImage())) idPic14.setVisible(false);
+        if(array.contains(idPic15.getImage())) idPic15.setVisible(false);
+        if(array.contains(idPic16.getImage())) idPic16.setVisible(false);
+        if(array.contains(idPic17.getImage())) idPic17.setVisible(false);
+        if(array.contains(idPic18.getImage())) idPic18.setVisible(false);
+        if(array.contains(idPic19.getImage())) idPic19.setVisible(false);
     }
 
 
