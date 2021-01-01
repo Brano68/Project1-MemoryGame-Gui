@@ -27,6 +27,28 @@ public class IntroductionController {
     static javafx.scene.image.Image p_6 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background6.jpg").toString());
     static javafx.scene.image.Image p_7 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background7.jpg").toString());
     static javafx.scene.image.Image p_8 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background8.jpg").toString());
+    static javafx.scene.image.Image p_9 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background9.jpg").toString());
+    static javafx.scene.image.Image p_10 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background10.jpg").toString());
+    static javafx.scene.image.Image p_11 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background11.jpg").toString());
+    static javafx.scene.image.Image p_12 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background12.jpg").toString());
+    static javafx.scene.image.Image p_13 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background13.jpg").toString());
+    static javafx.scene.image.Image p_14 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background14.jpg").toString());
+    static javafx.scene.image.Image p_15 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background15.jpg").toString());
+    static javafx.scene.image.Image p_16 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background16.jpg").toString());
+    static javafx.scene.image.Image p_17 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background17.jpg").toString());
+    static javafx.scene.image.Image p_18 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background18.jpg").toString());
+    static javafx.scene.image.Image p_19 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background19.jpg").toString());
+    static javafx.scene.image.Image p_20 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background20.jpg").toString());
+    static javafx.scene.image.Image p_21 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background21.jpg").toString());
+    static javafx.scene.image.Image p_22 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background22.jpg").toString());
+    static javafx.scene.image.Image p_23 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background23.jpg").toString());
+    static javafx.scene.image.Image p_24 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background24.jpg").toString());
+    static javafx.scene.image.Image p_25 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background25.jpg").toString());
+    static javafx.scene.image.Image p_26 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background26.jpg").toString());
+    static javafx.scene.image.Image p_27 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background27.jpg").toString());
+    static javafx.scene.image.Image p_28 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background28.jpg").toString());
+    static javafx.scene.image.Image p_29 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background29.jpg").toString());
+    static javafx.scene.image.Image p_30 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background30.jpg").toString());
 
     public javafx.scene.image.ImageView im1 = new javafx.scene.image.ImageView(p_1);
     public javafx.scene.image.ImageView im2 = new javafx.scene.image.ImageView(p_2);
@@ -35,7 +57,29 @@ public class IntroductionController {
     public javafx.scene.image.ImageView im5 = new javafx.scene.image.ImageView(p_5);
     public javafx.scene.image.ImageView im6 = new javafx.scene.image.ImageView(p_6);
     public javafx.scene.image.ImageView im7 = new javafx.scene.image.ImageView(p_7);
-    public javafx.scene.image.ImageView im8 = new ImageView(p_8);
+    public javafx.scene.image.ImageView im8 = new javafx.scene.image.ImageView(p_8);
+    public javafx.scene.image.ImageView im9 = new javafx.scene.image.ImageView(p_9);
+    public javafx.scene.image.ImageView im10 = new javafx.scene.image.ImageView(p_10);
+    public javafx.scene.image.ImageView im11 = new javafx.scene.image.ImageView(p_11);
+    public javafx.scene.image.ImageView im12 = new javafx.scene.image.ImageView(p_12);
+    public javafx.scene.image.ImageView im13 = new javafx.scene.image.ImageView(p_13);
+    public javafx.scene.image.ImageView im14 = new javafx.scene.image.ImageView(p_14);
+    public javafx.scene.image.ImageView im15 = new javafx.scene.image.ImageView(p_15);
+    public javafx.scene.image.ImageView im16 = new javafx.scene.image.ImageView(p_16);
+    public javafx.scene.image.ImageView im17 = new javafx.scene.image.ImageView(p_17);
+    public javafx.scene.image.ImageView im18 = new javafx.scene.image.ImageView(p_18);
+    public javafx.scene.image.ImageView im19 = new javafx.scene.image.ImageView(p_19);
+    public javafx.scene.image.ImageView im20 = new javafx.scene.image.ImageView(p_20);
+    public javafx.scene.image.ImageView im21 = new javafx.scene.image.ImageView(p_21);
+    public javafx.scene.image.ImageView im22 = new javafx.scene.image.ImageView(p_22);
+    public javafx.scene.image.ImageView im23 = new javafx.scene.image.ImageView(p_23);
+    public javafx.scene.image.ImageView im24 = new javafx.scene.image.ImageView(p_24);
+    public javafx.scene.image.ImageView im25 = new javafx.scene.image.ImageView(p_25);
+    public javafx.scene.image.ImageView im26 = new javafx.scene.image.ImageView(p_26);
+    public javafx.scene.image.ImageView im27 = new javafx.scene.image.ImageView(p_27);
+    public javafx.scene.image.ImageView im28 = new javafx.scene.image.ImageView(p_28);
+    public javafx.scene.image.ImageView im29 = new javafx.scene.image.ImageView(p_29);
+    public javafx.scene.image.ImageView im30 = new javafx.scene.image.ImageView(p_30);
 
     private Group p;
     //
@@ -84,44 +128,192 @@ public class IntroductionController {
             t.getKeyFrames().add(new KeyFrame(
                     Duration.millis(400),
                     (ActionEvent event) -> {
-                        p.getChildren().setAll(im3);
+                        p.getChildren().setAll(im4);
                     }
             ));
 
             t.getKeyFrames().add(new KeyFrame(
                     Duration.millis(500),
                     (ActionEvent event) -> {
-                        p.getChildren().setAll(im4);
+                        p.getChildren().setAll(im5);
                     }
             ));
 
             t.getKeyFrames().add(new KeyFrame(
                     Duration.millis(600),
                     (ActionEvent event) -> {
-                        p.getChildren().setAll(im5);
+                        p.getChildren().setAll(im6);
                     }
             ));
 
             t.getKeyFrames().add(new KeyFrame(
                     Duration.millis(700),
                     (ActionEvent event) -> {
-                        p.getChildren().setAll(im6);
+                        p.getChildren().setAll(im7);
                     }
             ));
 
             t.getKeyFrames().add(new KeyFrame(
                     Duration.millis(800),
                     (ActionEvent event) -> {
-                        p.getChildren().setAll(im7);
+                        p.getChildren().setAll(im8);
                     }
             ));
 
             t.getKeyFrames().add(new KeyFrame(
                     Duration.millis(900),
                     (ActionEvent event) -> {
-                        p.getChildren().setAll(im8);
+                        p.getChildren().setAll(im9);
                     }
             ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1000),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im10);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1100),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im11);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1200),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im12);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1300),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im13);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1400),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im14);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1500),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im15);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1600),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im16);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1700),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im17);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1800),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im18);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(1900),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im19);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2000),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im20);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2100),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im21);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2200),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im22);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2300),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im23);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2400),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im24);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2500),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im25);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2600),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im26);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2700),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im27);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2800),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im28);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(2900),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im29);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(3000),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im30);
+                    }
+            ));
+
             t.play();
 
             Stage primaryStage = new Stage();
