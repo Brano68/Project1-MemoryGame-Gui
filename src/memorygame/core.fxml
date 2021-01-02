@@ -69,5 +69,7 @@
       <ImageView fx:id="idPic17" fitHeight="90.0" fitWidth="90.0" layoutX="547.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="idPic18" fitHeight="90.0" fitWidth="90.0" layoutX="675.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="idPic19" fitHeight="90.0" fitWidth="90.0" layoutX="803.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="winnerImage" fitHeight="650.0" fitWidth="1200.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <Label fx:id="winnerLabel" layoutX="385.0" layoutY="613.0" prefHeight="17.0" prefWidth="414.0" visible="false" />
    </children>
 </Pane>
