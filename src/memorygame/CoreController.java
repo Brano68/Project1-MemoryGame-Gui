@@ -456,7 +456,15 @@ public class CoreController extends IntroductionController {
                 }
                 //if somebody is a winner
                 if(rightPairs == 10){
-                    makeResult();
+                    PauseTransition pause1 = new PauseTransition(Duration.seconds(2));
+                    pause1.setOnFinished(event -> {
+                        try {
+                            makeResult();
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                    pause1.play();
                 }
             }
             //set all zero
