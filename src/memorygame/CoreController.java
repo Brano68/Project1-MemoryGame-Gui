@@ -6,6 +6,7 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,7 +22,10 @@ import java.util.Set;
 public class CoreController extends IntroductionController {
 
 
-
+    @FXML
+    private Label winnerLabel;
+    @FXML
+    private ImageView winnerImage;
     @FXML
     private ImageView idPic0;
     @FXML
@@ -89,6 +93,9 @@ public class CoreController extends IntroductionController {
     private int seenCards = 0;
     private int id0, id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12,
             id13, id14, id15, id16, id17, id18, id19 = 0;
+
+    //how many pairs were right
+    private int rightPairs = 0;
 
     //a method for the filling arrays with the pictures
     private void fillArrays() throws FileNotFoundException {
@@ -171,7 +178,7 @@ public class CoreController extends IntroductionController {
 
 
     //a clicking method what happened if you press the button
-    public void click0(ActionEvent actionEvent) {
+    public void click0(ActionEvent actionEvent) throws FileNotFoundException {
         //if the seenCards are less then two
         if(seenCards<2){
             //incremet seenCards and id0
@@ -184,7 +191,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click1(ActionEvent actionEvent) {
+    public void click1(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id1++;
@@ -193,7 +200,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click2(ActionEvent actionEvent) {
+    public void click2(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id2++;
@@ -202,7 +209,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click3(ActionEvent actionEvent) {
+    public void click3(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id3++;
@@ -211,7 +218,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click4(ActionEvent actionEvent) {
+    public void click4(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id4++;
@@ -220,7 +227,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click5(ActionEvent actionEvent) {
+    public void click5(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id5++;
@@ -229,7 +236,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click6(ActionEvent actionEvent) {
+    public void click6(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id6++;
@@ -238,7 +245,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click7(ActionEvent actionEvent) {
+    public void click7(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id7++;
@@ -247,7 +254,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click8(ActionEvent actionEvent) {
+    public void click8(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id8++;
@@ -256,7 +263,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click9(ActionEvent actionEvent) {
+    public void click9(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id9++;
@@ -265,7 +272,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click10(ActionEvent actionEvent) {
+    public void click10(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id10++;
@@ -274,7 +281,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click11(ActionEvent actionEvent) {
+    public void click11(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id11++;
@@ -283,7 +290,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click12(ActionEvent actionEvent) {
+    public void click12(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id12++;
@@ -292,7 +299,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click13(ActionEvent actionEvent) {
+    public void click13(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id13++;
@@ -301,7 +308,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click14(ActionEvent actionEvent) {
+    public void click14(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id14++;
@@ -310,7 +317,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click15(ActionEvent actionEvent) {
+    public void click15(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id15++;
@@ -319,7 +326,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click16(ActionEvent actionEvent) {
+    public void click16(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id16++;
@@ -328,7 +335,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click17(ActionEvent actionEvent) {
+    public void click17(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id17++;
@@ -337,7 +344,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click18(ActionEvent actionEvent) {
+    public void click18(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id18++;
@@ -346,7 +353,7 @@ public class CoreController extends IntroductionController {
         }
     }
 
-    public void click19(ActionEvent actionEvent) {
+    public void click19(ActionEvent actionEvent) throws FileNotFoundException {
         if(seenCards<2){
             seenCards++;
             id19++;
@@ -357,7 +364,7 @@ public class CoreController extends IntroductionController {
 
 
     //a method for comparing the cards
-    private void compareTheCards() {
+    private void compareTheCards() throws FileNotFoundException {
         if (seenCards == 2) {
             ArrayList<Image> array = new ArrayList<>();
             if (id0 == 1) {
@@ -437,6 +444,7 @@ public class CoreController extends IntroductionController {
                     idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
                 }
             }else {
+                rightPairs++;
                 hideTheCardsAndButtons();
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
@@ -446,9 +454,52 @@ public class CoreController extends IntroductionController {
                     players[1].setScore(2);
                     idScore2.setText(String.valueOf(players[1].getScore()));
                 }
+                //if somebody is a winner
+                if(rightPairs == 10){
+                    PauseTransition pause1 = new PauseTransition(Duration.seconds(2));
+                    pause1.setOnFinished(event -> {
+                        try {
+                            makeResult();
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                    pause1.play();
+                }
             }
             //set all zero
             setAllZero();
+        }
+    }
+
+    //a method for making a result
+    public void makeResult() throws FileNotFoundException {
+        String path1 = "src/memorygame/picturecore/winner.jpg";
+        String path2 = "src/memorygame/picturecore/tie.jpg";
+        if(players[0].getScore()>players[1].getScore()){
+            System.out.println("The winner is player1");
+            FileInputStream inputstream = new FileInputStream(path1);
+            Image image = new Image(inputstream);
+            winnerImage.setImage(image);
+            winnerImage.setVisible(true);
+            winnerLabel.setText("Winner is: " + players[0].getName());
+            winnerLabel.setVisible(true);
+        }else if(players[0].getScore()<players[1].getScore()){
+            System.out.println("The winner is player2");
+            FileInputStream inputstream = new FileInputStream(path1);
+            Image image = new Image(inputstream);
+            winnerImage.setImage(image);
+            winnerImage.setVisible(true);
+            winnerLabel.setText("Winner is: " + players[1].getName());
+            winnerLabel.setVisible(true);
+        }else{
+            System.out.println("Tie");
+            FileInputStream inputstream = new FileInputStream(path2);
+            Image image = new Image(inputstream);
+            winnerImage.setImage(image);
+            winnerImage.setVisible(true);
+            //winnerLabel.setText("TIE!!!");
+            //winnerLabel.setVisible(true);
         }
     }
 
