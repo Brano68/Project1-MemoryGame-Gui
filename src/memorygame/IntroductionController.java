@@ -99,7 +99,7 @@ public class IntroductionController {
         String name1 = idPlayer1.getText();
         String name2 = idPlayer2.getText();
 
-        if (name1.equals("") == false && name2.equals("") == false) {
+        if (name1.equals("") == false && name2.equals("") == false && name1.equals(name2) == false) {
             //creating two players
             Player player1 = new Player(name1);
             players[0] = player1;
