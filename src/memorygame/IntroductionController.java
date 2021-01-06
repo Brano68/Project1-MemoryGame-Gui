@@ -49,6 +49,11 @@ public class IntroductionController {
     static javafx.scene.image.Image p_28 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background28.jpg").toString());
     static javafx.scene.image.Image p_29 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background29.jpg").toString());
     static javafx.scene.image.Image p_30 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background30.jpg").toString());
+    static javafx.scene.image.Image p_31 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background31.jpg").toString());
+    static javafx.scene.image.Image p_32 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background32.jpg").toString());
+    static javafx.scene.image.Image p_33 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background33.jpg").toString());
+    static javafx.scene.image.Image p_34 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background34.jpg").toString());
+    static javafx.scene.image.Image p_35 = new javafx.scene.image.Image(Main.class.getResource("picturecore/background35.jpg").toString());
 
     public javafx.scene.image.ImageView im1 = new javafx.scene.image.ImageView(p_1);
     public javafx.scene.image.ImageView im2 = new javafx.scene.image.ImageView(p_2);
@@ -80,6 +85,11 @@ public class IntroductionController {
     public javafx.scene.image.ImageView im28 = new javafx.scene.image.ImageView(p_28);
     public javafx.scene.image.ImageView im29 = new javafx.scene.image.ImageView(p_29);
     public javafx.scene.image.ImageView im30 = new javafx.scene.image.ImageView(p_30);
+    public javafx.scene.image.ImageView im31 = new javafx.scene.image.ImageView(p_31);
+    public javafx.scene.image.ImageView im32 = new javafx.scene.image.ImageView(p_32);
+    public javafx.scene.image.ImageView im33 = new javafx.scene.image.ImageView(p_33);
+    public javafx.scene.image.ImageView im34 = new javafx.scene.image.ImageView(p_34);
+    public javafx.scene.image.ImageView im35 = new javafx.scene.image.ImageView(p_35);
 
     private Group p;
     //
@@ -313,6 +323,43 @@ public class IntroductionController {
                         p.getChildren().setAll(im30);
                     }
             ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(3100),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im31);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(3200),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im32);
+                    }
+            ));
+/*
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(3300),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im33);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(3400),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im34);
+                    }
+            ));
+
+            t.getKeyFrames().add(new KeyFrame(
+                    Duration.millis(3500),
+                    (ActionEvent event) -> {
+                        p.getChildren().setAll(im35);
+                    }
+            ));
+*/
+
 
             t.play();
 
