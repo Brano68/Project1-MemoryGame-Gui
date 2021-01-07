@@ -38,5 +38,10 @@
          <font>
             <Font size="17.0" />
          </font></Button>
+      <Label fx:id="sameNames" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="257.0" prefHeight="50.0" prefWidth="700.0" text="Change one of the names, because they are the same!!!" textAlignment="CENTER" textFill="#f700b1" visible="false">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

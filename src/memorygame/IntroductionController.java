@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -91,6 +92,10 @@ public class IntroductionController {
     public javafx.scene.image.ImageView im34 = new javafx.scene.image.ImageView(p_34);
     public javafx.scene.image.ImageView im35 = new javafx.scene.image.ImageView(p_35);
 
+
+    @FXML
+    private Label sameNames;
+
     private Group p;
     //
 
@@ -108,6 +113,10 @@ public class IntroductionController {
     public void startGame(ActionEvent actionEvent) throws IOException {
         String name1 = idPlayer1.getText();
         String name2 = idPlayer2.getText();
+
+        if (name1.equals(name2) && name1.equals("") == false && name2.equals("") == false) {
+            sameNames.setVisible(true);
+        }
 
         if (name1.equals("") == false && name2.equals("") == false && name1.equals(name2) == false) {
             //creating two players
