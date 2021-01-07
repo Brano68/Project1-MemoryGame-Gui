@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
@@ -482,7 +483,9 @@ public class CoreController extends IntroductionController {
             Image image = new Image(inputstream);
             winnerImage.setImage(image);
             winnerImage.setVisible(true);
-            winnerLabel.setText("Winner is: " + players[0].getName());
+            //winnerLabel.setText("Winner is: " + players[0].getName());
+            winnerLabel.setText(players[0].getName());
+            winnerLabel.setEffect(new Reflection());
             winnerLabel.setVisible(true);
         }else if(players[0].getScore()<players[1].getScore()){
             System.out.println("The winner is player2");
@@ -490,7 +493,9 @@ public class CoreController extends IntroductionController {
             Image image = new Image(inputstream);
             winnerImage.setImage(image);
             winnerImage.setVisible(true);
-            winnerLabel.setText("Winner is: " + players[1].getName());
+            //winnerLabel.setText("Winner is: " + players[1].getName());
+            winnerLabel.setText(players[1].getName());
+            winnerLabel.setEffect(new Reflection());
             winnerLabel.setVisible(true);
         }else{
             System.out.println("Tie");
