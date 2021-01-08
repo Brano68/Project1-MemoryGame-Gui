@@ -27,6 +27,8 @@ public class CoreController extends IntroductionController {
 
 
     @FXML
+    private Button playAgain;
+    @FXML
     private Button audioButton;
     @FXML
     private Label winnerLabel;
@@ -108,6 +110,8 @@ public class CoreController extends IntroductionController {
     private File song = new File("src/memorygame/song/DeanMartin.wav");
     private boolean music = false;
 
+    private int counter = 0;
+
     //a method for the filling arrays with the pictures
     private void fillArrays() throws FileNotFoundException {
         for(int i = 0; i < 10; i++){
@@ -187,12 +191,15 @@ public class CoreController extends IntroductionController {
         //putting the cards
         putTheCards();
         //preparing a song file
-        try {
-            clip = AudioSystem.getClip();
-            clip.open(AudioSystem.getAudioInputStream(song));
-        }catch (Exception e){
-            System.out.println("I did not find it, something wrong happened.");
+        if(counter == 0){
+            try {
+                clip = AudioSystem.getClip();
+                clip.open(AudioSystem.getAudioInputStream(song));
+            }catch (Exception e){
+                System.out.println("I did not find it, something wrong happened.");
+            }
         }
+        counter++;
     }
 
 
@@ -483,6 +490,7 @@ public class CoreController extends IntroductionController {
                     pause1.setOnFinished(event -> {
                         try {
                             makeResult();
+                            playAgain.setVisible(true);
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         }
@@ -882,6 +890,54 @@ public class CoreController extends IntroductionController {
             clip.stop();
         }
     }
+
+
+    //this is continue if somebody is a winner
+
+    public void playTheGameAgain(ActionEvent event) throws FileNotFoundException {
+        playAgain.setVisible(false);
+        rightPairs = 0;
+        winnerLabel.setVisible(false);
+        winnerImage.setVisible(false);
+        idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
+        setAllZero();
+        int score0, score1 = 0;
+
+        if(players[0].getScore() > 0){
+            score0 = players[0].getScore();
+            players[0].setScore(-score0);
+        }
+        if(players[1].getScore() > 0){
+            score1 = players[1].getScore();
+            players[1].setScore(-score1);
+        }
+
+        setTheGame(null);
+        ////
+        idBut0.setVisible(true);
+        idBut1.setVisible(true);
+        idBut2.setVisible(true);
+        idBut3.setVisible(true);
+        idBut4.setVisible(true);
+        idBut5.setVisible(true);
+        idBut6.setVisible(true);
+        idBut7.setVisible(true);
+        idBut8.setVisible(true);
+        idBut9.setVisible(true);
+        idBut10.setVisible(true);
+        idBut11.setVisible(true);
+        idBut12.setVisible(true);
+        idBut13.setVisible(true);
+        idBut14.setVisible(true);
+        idBut15.setVisible(true);
+        idBut16.setVisible(true);
+        idBut17.setVisible(true);
+        idBut18.setVisible(true);
+        idBut19.setVisible(true);
+    }
+
+
+
 }
 
 

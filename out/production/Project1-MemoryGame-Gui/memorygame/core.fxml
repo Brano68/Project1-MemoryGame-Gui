@@ -87,5 +87,6 @@
          <font>
             <Font size="47.0" />
          </font></Button>
+      <Button fx:id="playAgain" layoutX="1125.0" layoutY="594.0" mnemonicParsing="false" onAction="#playTheGameAgain" text="Play again" visible="false" />
    </children>
 </Pane>
