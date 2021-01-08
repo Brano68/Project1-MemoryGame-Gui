@@ -7,6 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memorygame.CoreController">
    <children>
+      <Button fx:id="audioButton" layoutX="32.0" layoutY="570.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="49.0" prefWidth="114.0" text="Play music" />
       <TextField fx:id="idName1" alignment="CENTER" editable="false" layoutX="337.0" layoutY="59.0" prefHeight="44.0" prefWidth="202.0">
          <font>
             <Font size="17.0" />

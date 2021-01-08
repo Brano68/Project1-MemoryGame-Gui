@@ -13,6 +13,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -23,6 +26,8 @@ import java.util.Set;
 public class CoreController extends IntroductionController {
 
 
+    @FXML
+    private Button audioButton;
     @FXML
     private Label winnerLabel;
     @FXML
@@ -98,6 +103,11 @@ public class CoreController extends IntroductionController {
     //how many pairs were right
     private int rightPairs = 0;
 
+    //variables for a song
+    private Clip clip;
+    private File song = new File("src/memorygame/song/DeanMartin.wav");
+    private boolean music = false;
+
     //a method for the filling arrays with the pictures
     private void fillArrays() throws FileNotFoundException {
         for(int i = 0; i < 10; i++){
@@ -163,6 +173,7 @@ public class CoreController extends IntroductionController {
     //a method for an initializing game
     public void setTheGame(ActionEvent actionEvent) throws FileNotFoundException {
         idName1.setText(players[0].getName());
+        idName1.setStyle("-fx-control-inner-background: blue");
         idName2.setText(players[1].getName());
         idScore1.setText(String.valueOf(players[0].getScore()));
         idScore2.setText(String.valueOf(players[1].getScore()));
@@ -175,6 +186,13 @@ public class CoreController extends IntroductionController {
         createMixArr();
         //putting the cards
         putTheCards();
+        //preparing a song file
+        try {
+            clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(song));
+        }catch (Exception e){
+            System.out.println("I did not find it, something wrong happened.");
+        }
     }
 
 
@@ -441,8 +459,12 @@ public class CoreController extends IntroductionController {
                 String string = idWhoGoes.getText();
                 if(string.charAt(0) == '1'){
                     idWhoGoes.setText("2Player: " + idName2.getText() + " it is your turn!!!");
+                    idName1.setStyle("-fx-control-inner-background: white");
+                    idName2.setStyle("-fx-control-inner-background: blue");
                 }else {
                     idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
+                    idName1.setStyle("-fx-control-inner-background: blue");
+                    idName2.setStyle("-fx-control-inner-background: white");
                 }
             }else {
                 rightPairs++;
@@ -848,6 +870,18 @@ public class CoreController extends IntroductionController {
         }
     }
 
+    //a method for playing a song
+    public void playMusic(ActionEvent event) {
+        if(music == false){
+            music = true;
+            audioButton.setText("Stop-music");
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        }else{
+            music = false;
+            audioButton.setText("Play-music");
+            clip.stop();
+        }
+    }
 }
 
 
