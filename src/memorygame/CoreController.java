@@ -900,6 +900,8 @@ public class CoreController extends IntroductionController {
         winnerLabel.setVisible(false);
         winnerImage.setVisible(false);
         idWhoGoes.setText("1Player: " + idName1.getText() + " it is your turn!!!");
+        idName1.setStyle("-fx-control-inner-background: blue");
+        idName2.setStyle("-fx-control-inner-background: white");
         setAllZero();
         int score0, score1 = 0;
 

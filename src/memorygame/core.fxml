@@ -78,12 +78,12 @@
       <ImageView fx:id="idPic17" fitHeight="90.0" fitWidth="90.0" layoutX="547.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="idPic18" fitHeight="90.0" fitWidth="90.0" layoutX="675.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="idPic19" fitHeight="90.0" fitWidth="90.0" layoutX="803.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="winnerImage" fitHeight="656.0" fitWidth="1200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <ImageView fx:id="winnerImage" fitHeight="658.0" fitWidth="1200.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" visible="false" />
       <Label fx:id="winnerLabel" alignment="CENTER" layoutX="437.0" layoutY="211.0" prefHeight="68.0" prefWidth="362.0" textAlignment="CENTER" underline="true" visible="false">
          <font>
             <Font size="33.0" />
          </font></Label>
-      <Button fx:id="idStartButton" layoutX="-4.0" layoutY="-4.0" mnemonicParsing="false" onAction="#setTheGame" prefHeight="650.0" prefWidth="1206.0" styleClass="buttonPlay" stylesheets="@stylePlayButton.css">
+      <Button fx:id="idStartButton" layoutX="-4.0" layoutY="-4.0" mnemonicParsing="false" onAction="#setTheGame" prefHeight="656.0" prefWidth="1206.0" styleClass="buttonPlay" stylesheets="@stylePlayButton.css">
          <font>
             <Font size="47.0" />
          </font></Button>
