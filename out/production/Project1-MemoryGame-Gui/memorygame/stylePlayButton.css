@@ -1,0 +1,6 @@
+.buttonPlay {
+  -fx-background-color: transparent;
+  -fx-background-image: url('./picturecore/play.jpg');
+  -fx-background-size: cover;
+  -fx-cursor: hand;
+}
