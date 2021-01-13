@@ -8,12 +8,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -91,13 +93,13 @@ public class IntroductionController {
     public javafx.scene.image.ImageView im33 = new javafx.scene.image.ImageView(p_33);
     public javafx.scene.image.ImageView im34 = new javafx.scene.image.ImageView(p_34);
     public javafx.scene.image.ImageView im35 = new javafx.scene.image.ImageView(p_35);
-
+    @FXML
+    private Button idStartButton;
 
     @FXML
     private Label sameNames;
 
     private Group p;
-    //
 
     @FXML
     private Pane idStartPane;
@@ -125,6 +127,10 @@ public class IntroductionController {
             Player player2 = new Player(name2);
             players[1] = player2;
             idStartPane.setVisible(false);
+
+            //closing the first scene
+            Stage stage = (Stage) idStartButton.getScene().getWindow();
+            stage.close();
 
             //effect for background
             p = new Group(im1);
@@ -377,7 +383,7 @@ public class IntroductionController {
             final Group root = new Group(p, beforeBackground);
             primaryStage.setTitle("Core of the MemoryGame");
             primaryStage.setScene(new Scene(root, 1200, 640));
-            primaryStage.initModality(Modality.WINDOW_MODAL);
+            //primaryStage.initModality(Modality.WINDOW_MODAL);
             primaryStage.show();
         }
     }
