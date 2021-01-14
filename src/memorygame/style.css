@@ -13,3 +13,14 @@ body{
   -fx-background-size: cover;
   -fx-cursor: hand;
 }
+
+.buttonPlay {
+  -fx-background-color: transparent;
+  -fx-background-image: url('./picturecore/play.png');
+  -fx-background-size: cover;
+  -fx-cursor: hand;
+}
+
+.buttonPlay:hover{
+  -fx-background-image: url('./picturecore/play.png');
+}

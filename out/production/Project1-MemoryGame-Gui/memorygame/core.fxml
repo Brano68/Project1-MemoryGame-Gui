@@ -83,7 +83,7 @@
          <font>
             <Font size="33.0" />
          </font></Label>
-      <Button fx:id="idStartButton" layoutX="-4.0" layoutY="-4.0" mnemonicParsing="false" onAction="#setTheGame" prefHeight="656.0" prefWidth="1206.0" styleClass="buttonPlay" stylesheets="@stylePlayButton.css">
+      <Button fx:id="idStartButton" layoutX="-4.0" layoutY="-4.0" mnemonicParsing="false" onAction="#setTheGame" prefHeight="656.0" prefWidth="1206.0" styleClass="buttonPlay" stylesheets="@./style.css">
          <font>
             <Font size="47.0" />
          </font></Button>
