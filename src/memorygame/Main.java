@@ -41,10 +41,11 @@ public class Main extends Application {
         rotateTransition.play();
 
         Parent root = FXMLLoader.load(getClass().getResource("introduction.fxml"));
-        primaryStage.setTitle("Introduction-MemoryGame");
+        primaryStage.setTitle("Intro");
         p = new Group(im1);
         final Group root1 = new Group(p, p2, root);
         primaryStage.setScene(new Scene(root1, 700, 400));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
