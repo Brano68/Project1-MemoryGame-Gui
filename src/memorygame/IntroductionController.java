@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
@@ -18,6 +19,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class IntroductionController {
@@ -379,6 +381,12 @@ public class IntroductionController {
             t.play();
 
             Stage primaryStage = new Stage();
+            //set the icon
+            String path1 = "src/memorygame/icon/an_icon.png";
+            FileInputStream inputstream1 = new FileInputStream(path1);
+            Image image = new Image(inputstream1);
+            primaryStage.getIcons().add(image);
+
             Parent beforeBackground = FXMLLoader.load(getClass().getResource("core.fxml"));
             final Group root = new Group(p, beforeBackground);
             primaryStage.setTitle("Winter Memory Game");

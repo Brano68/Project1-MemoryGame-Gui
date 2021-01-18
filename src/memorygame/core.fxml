@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memorygame.CoreController">
    <children>
-      <Button fx:id="audioButton" layoutX="32.0" layoutY="570.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="49.0" prefWidth="114.0" text="Play music" />
+      <Button fx:id="audioButton" alignment="TOP_CENTER" layoutX="32.0" layoutY="551.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="70.0" prefWidth="115.0" styleClass="buttonMusic" stylesheets="@styleMusic.css" text="Play music" textAlignment="CENTER" textFill="#e4d7d7">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
       <TextField fx:id="idName1" alignment="CENTER" editable="false" layoutX="337.0" layoutY="59.0" prefHeight="44.0" prefWidth="202.0">
          <font>
             <Font size="17.0" />
@@ -87,6 +94,9 @@
          <font>
             <Font size="47.0" />
          </font></Button>
-      <Button fx:id="playAgain" layoutX="1125.0" layoutY="594.0" mnemonicParsing="false" onAction="#playTheGameAgain" text="Play again" visible="false" />
+      <Button fx:id="playAgain" alignment="CENTER" layoutX="1088.0" layoutY="581.0" mnemonicParsing="false" onAction="#playTheGameAgain" prefHeight="39.0" prefWidth="107.0" text="Play again" textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
    </children>
 </Pane>

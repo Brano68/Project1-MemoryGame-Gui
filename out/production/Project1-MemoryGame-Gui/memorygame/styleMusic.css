@@ -1,0 +1,6 @@
+.buttonMusic{
+  -fx-background-color: transparent;
+  -fx-background-image: url('./picturecore/playSong.jpg');
+  -fx-background-size: cover;
+  -fx-cursor: hand;
+}

@@ -9,11 +9,14 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.effect.Reflection;
+import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import java.io.FileInputStream;
 
 public class Main extends Application {
 
@@ -25,8 +28,10 @@ public class Main extends Application {
     private Text text = new Text("Memory Game");
     private Group p2;
 
+
     @Override
     public void start(Stage primaryStage) throws Exception{
+        //set a rotating label
         text.setFont(Font.font("Verdena", FontWeight.BLACK, 25));
         text.setX(250);
         text.setY(70);
@@ -40,6 +45,13 @@ public class Main extends Application {
         rotateTransition.setAxis(new Point3D(15,2,10));
         rotateTransition.play();
 
+        //set an icon
+        String path1 = "src/memorygame/icon/an_icon.png";
+        FileInputStream inputstream1 = new FileInputStream(path1);
+        Image image = new Image(inputstream1);
+        primaryStage.getIcons().add(image);
+
+        //set a scene
         Parent root = FXMLLoader.load(getClass().getResource("introduction.fxml"));
         primaryStage.setTitle("Intro");
         p = new Group(im1);
